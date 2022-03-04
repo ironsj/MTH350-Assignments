@@ -1,0 +1,60 @@
+\documentclass[11 pt]{article}
+\title{Proof 9}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem P.1, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Let $R$ be any commutative ring and let $Q$ be the set of all polynomials in $R[x]$ that have degree 2 or less. Prove or disprove: $Q$ is a subring of $R[x]$.
+\end{proposition}
+\begin{proof}
+\newpar 
+We will prove this false by showing there is a polynomial in $R[x]$ that has a degree 2 or less that is not a subring of $R[x]$. We will let $R$ be a commutative ring and $Q$ be the set of degree 2 or less polynomials in $R[x]$. By Theorem 9.3, if $Q$ is a subset of the polynomials in $x$ over $R$, then $Q$ will be a subring of $R[x]$ if $Q$ is closed under addition and multiplication, contains a zero element, and is closed under additive inverses. We know $Q$ is a subset of $R[x]$ from the proposition. We will now show $Q$ does not satisfy the conditions required to be a subring of $R[x]$.
+
+\newpar
+For our counterexample, we will let $R$, our commutative ring, be the set of integers and use an element of $Q$, $2x^2+4x+3$, to show $Q$ is not closed under multiplication. We will multiply $2x^2+4x+3$ by itself as follows:
+\begin{align*}
+(2x^2+4x+3)(2x^2+4x+3)&=4x^4+8x^3+6x^2+8x^3+16x^2+12x+6x^2+12x+9 \\
+&= 4x^4+16x^3+28x^2+24x+9. \\
+\end{align*}
+\noindent
+$4x^4+16x^3+28x^2+24x+9$ is not a polynomial of 2 degrees or less, and therefore, $Q$ is not closed under multiplication. Since $Q$ is not closed under multiplication, it does not satisfy Theorem 9.3 and $Q$ is not a subring of $R[x]$, and we have shown a counterexample to the proposition.
+\end{proof}
+
+
+\newpar
+\begin{proposition}
+Let $R$ be any commutative ring. Let $S$ be the set of all polynomials in $R[x]$ whose constant term is 0. Prove or disprove: $S$ is a subring of $R[x]$.
+\end{proposition}
+\begin{proof}
+\newpar 
+Let $R$ be the set of integers and $S$ be the set of polynomials in $R[x]$ whose constant term is 0. According to Theorem 9.3, if $S$ is a subset of $R[x]$, then $S$ will be a subring of $R[x]$ if it is closed under addition and multiplication, contains a zero element, and is closed under additive inverses. We know $S$ is a subset of $R[x]$ from the proposition. We will now see if $S$ satisfies all of the conditions required to be a subring of $R[x]$.
+
+\newpar
+  Let $n$ and $m$ be a nonnegative integers and $a_n, a_{n-1},. . .,a_2, a_1; b_m, b_{m-1},. . .,b_2, b_1\in R \text{. Also let } a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0\text{; } b_mx^m+b_{m-1}x^{m-1}+. . .+b_2x^2+b_1x+0 \in S \text{ with } a_n \neq0, b_n\neq0$. Definition 11.4 says if we are to add the two polynomials together, the result is $(a_n+b_n)x^n+(a_{n-1}+b_{n-1})x^{n-1}+. . .+(a_2+b_2)x^2+(a_1+b_1)x+0$. Since $a_n, a_{n-1},. . .,a_2, a_1; b_m, b_{m-1},. . .,b_2, b_1$ are elements of $R$, $(a_n+b_n), (a_{n-1}+b_{n-1}),. . .,(a_2+b_2), (a_1+b_1)$ are elements of $R$ by Definition 7.2 (the set of R is closed under addition). The constant term is also 0. Thus, $(a_n+b_n)x^n+(a_{n-1}+b_{n-1})x^{n-1}+. . .+(a_2+b_2)x^2+(a_1+b_1)x+0 \in S$ and is closed under addition.
+  
+\newpar
+Now if we are to multiply the two polynomials together, Definition 11.4 tell us the result is $c_{m+n}x^{m+n}+c_{m+n+-1}x^{m+n+-1}+. . .+ c_2x^2+c_1x^1+0$, where for each $k$ with $0\le k\le m+n$, $c_k=a_kb_0+a_{k-1}b_1+a_{k-2}b2. . .+a_2b_{k-2}+a_1b_{k-1}+a_0b_k$. By Definition 7.2 (the set of R is closed under multiplication), $c_{m+n},c_{m+n-1},. . ., c_2, c_1$ are elements of $R$. The constant term is also 0. Thus, $c_{m+n}x^{m+n}+c_{m+n+-1}x^{m+n+-1}+. . .+ c_2x^2+c_1x^1+0_R \in S$ and is closed under multiplication.
+  
+  \newpar
+  We will now let $n$ be and nonnegative integer, $a_n, a_{n-1},. . .,a_2, a_1 \in R$ and $a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0 \in S$. If we add $0$, which by definition is an element of $S$, the result is $a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0$. Therefore, since $(a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0)$+$0$=$a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0$, $0$ is the zero element in $S$ by definition.
+  
+  \newpar
+  Finally, we will add $-a_nx^n-a_{n-1}x^{n-1}-. . .-a_2x^2-a_1x+0$ to $a_nx^n+a_{n-1}x^{n-1}+. . .+a_2x^2+a_1x+0$. We know $-a_nx^n-a_{n-1}x^{n-1}-. . .-a_2x^2-a_1x+0\in S$ because $a_n,a_{n-1},. . . ,a_2,a_1$ have additive inverses by Definition 7.2. When we add the two polynomials together the result is 0, or the zero element in $S$. By definition, every element of $S$ has an additive inverse, and therefore, is closed under additive inverses. Since we have shown $S$ is a subset of $R[x]$ and $S$ is closed under addition and multiplication, contains $0_R$, and is closed under additive inverses, Theorem 9.3 tells us $S$ is a subring of $R[x]$.
+\end{proof}
+
+
+
+\end{document}
