@@ -1,0 +1,35 @@
+\documentclass[11 pt]{article}
+\title{Proof 3}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+\newcommand{\powerset}{\raisebox{.15\baselineskip}{\Large\ensuremath{\wp}}}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem ANS.3, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Let $\mathcal{P}_n$ denote the power set of the set $\{1, 2, . . . , n\}$. Find all the units of $\mathcal{P}_n$ for any
+$n \in N$ and prove that your answer is correct.
+\end{proposition}
+\begin{proof}
+To find all of the units of $\mathcal{P}_n$ for any $n \in N$, we must first show what acts as the identity in $\mathcal{P}_n$. We will let $S$ be the set $\{1, 2, . . . , n\}$ and $\mathcal{P}_n$ be it's power set. $S \subseteq S$ because any set is a subset of itself, and therefore, $S \in \mathcal{P}_n$ by the definition of power set. We will let $M$ be a subset of $S$. Since $M \subseteq S$, if $M \cap S$ it will equal $M$ because intersection with a subset equals the subset itself. Because $M \subseteq S$, $M \in \mathcal{P}_n$ by the definition of power set. Therefore, for every $M$ that exists in $\mathcal{P}_n$, $M \cap S=M$. Thus, we can see $S$, or the set $\{1, 2, . . . , n\}$, acts as the identity element.
+
+\newpar
+The units of $\mathcal{P}_n$ will be the elements of the power set that when they intersect are the identity (which we have established as the set $\{1, 2, . . . , n\}$ in $\mathcal{P}_n$). This only occurs when the set $\{1, 2, . . . , n\}$ intersects with itself, or if we let $S$ represent the set$\{1, 2, . . . , n\}$ again, $(S \cap S) = S$. This can be seen if we let $k$ be an arbitrary element of $S \cap S$. By the definition of intersection, $k \in S$ and $k \in S$, and thus, $k \in S$. Therefore, $(S \cap S) \subseteq S$. Also if we let $k$ be an arbitrary element of $S$, then $k \in S$ and $k \in S$. Thus, $k \in S \cap S$. This means $S \subseteq  (S \cap S)$. Finally, we can conclude $S \cap S = S$.
+
+\newpar
+We have shown that the only way to yield the identity, $\{1, 2, . . . , n\}$, in $\mathcal{P}_n$ is when $\{1, 2, . . . , n\}$ intersects with itself. Therefore, by the definition of a unit the units in $\mathcal{P}_n$ for any $n \in N$ is the set $\{1, 2, . . . , n\}$.
+
+
+\end{proof}
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[11 pt]{article}
+\title{Problem 8}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem RF.5, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Let $D_2(\mathbb{R})$ be the set of all 2 x 2 diagonal matrices with real number entries. That is, $D_2(\mathbb{R})= \begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$. Prove that $D_2(\mathbb{R})$ is a subring of $M_2(\mathbb{R})$ (the ring of all 2 x 2 matrices with real number entries).
+\end{proposition}
+\begin{proof}
+To prove $D_2(\mathbb{R})$ is a subring of $M_2(\mathbb{R})$, we must first show $D_2(\mathbb{R})$ is a subset of $M_2(\mathbb{R})$. Let $a, b \in \mathbb{R}$ and $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}\in D_2(\mathbb{R})$. All of the entries of $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$ are real numbers, and therefore, would fit the definition of $M_2(\mathbb{R})$ where it is a 2 x 2 matrix and all of its entries are real numbers. Thus, $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix} \in M_2(\mathbb{R})$, and by definition $D_2(\mathbb{R}) \subseteq M_2(\mathbb{R})$.
+  
+  \newpar
+  Now that we have shown $D_2(\mathbb{R}) \subseteq M_2(\mathbb{R})$, Theorem 9.3 allows us to say if we can show $D_2(\mathbb{R})$ is closed under addition and multiplication, contains $0_R$, and is closed under additive inverses, we can say $D_2(\mathbb{R})$ is a subring of $M_2(\mathbb{R})$.
+  
+  \newpar
+  Let $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}, \begin{bmatrix}
+    c & 0 \\
+    0 & d
+  \end{bmatrix} \in D_2(\mathbb{R})$. If we are to add the two matrices together, the result is $\begin{bmatrix}
+    (a+c) & 0 \\
+    0 & (b+d)
+  \end{bmatrix}$. Since $a, b, c, d$ are real numbers and the real numbers are closed under addition, $a+c$ and $b+d$ are real numbers. Thus, $\begin{bmatrix}
+    (a+c) & 0 \\
+    0 & (b+d)
+  \end{bmatrix}\in D_2(\mathbb{R})$ and is closed under addition.
+  
+  \newpar
+Now if we are to multiply the two matrices together, the result is $\begin{bmatrix}
+    ac & 0 \\
+    0 & bd
+  \end{bmatrix}$. Since $a, b, c , d$ are real numbers and the real numbers are closed under multiplication, $ac$ and $bd$ are real numbers. Thus, $\begin{bmatrix}
+    ac & 0 \\
+    0 & bd
+  \end{bmatrix}\in D_2(\mathbb{R})$ and is closed under multiplication.
+  
+  \newpar
+  We will once again let $a, b\in \mathbb{R}$ and $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}\in D_2(\mathbb{R})$. If we add $\begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+  \end{bmatrix}$, which by definition is an element of $D_2(\mathbb{R})$, the result is $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$. Therefore, since $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$+$\begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+  \end{bmatrix}$=$\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$, $\begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+  \end{bmatrix}$ is the zero element in $D_2(\mathbb{R})$ by definition.
+  
+  \newpar
+  Finally, we will add $\begin{bmatrix}
+    -a & 0 \\
+    0 & -b
+  \end{bmatrix}$ to $\begin{bmatrix}
+    a & 0 \\
+    0 & b
+  \end{bmatrix}$. We know $\begin{bmatrix}
+    -a & 0 \\
+    0 & -b
+  \end{bmatrix}\in D_2(\mathbb{R})$ since the diagonal entries are real numbers. When we add the two matrices together the result is $\begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+  \end{bmatrix}$, or the zero element in $D_2(\mathbb{R})$. By definition, every element of $D_2(\mathbb{R})$ has an additive inverse, and therefore, is closed under additive inverses. Since we have shown $D_2(\mathbb{R}) \subseteq M_2(\mathbb{R})$ and $D_2(\mathbb{R})$ is closed under addition and multiplication, contains $0_R$, and is closed under additive inverses, Theorem 9.3 tells us $D_2(\mathbb{R})$ is a subring of $M_2(\mathbb{R})$.
+
+
+
+
+\end{proof}
+\end{document}

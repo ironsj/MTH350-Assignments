@@ -1,0 +1,29 @@
+\documentclass[11 pt]{article}
+\title{Problem 5}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem RF.4, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+An element $a$ in a ring $R$ is called idempotent if $a^2 = a$. Prove or disprove: The only idempotent elements in an integral domain are $0_R$ and $1_R$ (that is, the additive and multiplicative identities
+of the ring).
+
+
+\end{proposition}
+\begin{proof}
+Let $R$ be an integral domain and the element $a \in R$ be idempotent. This means that $a^2=a$. Thus, $a^2-a=0_R$. Using the distributive property $a(a-1_R)=0_R$. By the definition of integral domain, there are no zero divisors. Therefore either $a=0$ or $a-1_R=0$. Furthermore, we can say $a=0_R$ or $a=1_R$. We have then determined the only idempotent elements of $R$ are $0_R$ and $1_R$, completing the proof.
+
+\end{proof}
+\end{document}

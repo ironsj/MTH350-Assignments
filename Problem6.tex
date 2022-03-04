@@ -1,0 +1,32 @@
+\documentclass[11 pt]{article}
+\title{Problem 6}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem RF.2, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Let $R$ be a commutative ring and $a, b \in R$. Prove or disprove: If $a$ is a unit in $R$ and $b^2=0_R$ (where $0_R$ is the zero element of R), then $a + b$ is a unit in $R$.
+
+\end{proposition}
+\begin{proof}
+To show $a+b$ is a unit in $R$, we will find a multiplicative inverse to $a+b$. We will start by multiplying $a+b$ by $a-b$. Since $R$ is commutative we can say
+\begin{align*}
+(a+b)(a-b)&=a^2-ab+ba-b^2 \\
+&=a^2-b^2. \\
+\end{align*}
+\noindent
+Since $b^2=0_R$, we can say $a^2-b^2=a^2$. We will now multiply $a^2$ by $a^{-2}$. Since $a$ is a unit, by Definition 8.4, we know $a^2\cdot a^{-2}=a^2\cdot (a^{-1})^2$. Lemma 8.8 says tells us that $(a^{-1})^2$ will be the multiplicative inverse of $a^2$, and we can say $a^2\cdot (a^{-1})^2=1$. Therefore, we have shown $(a-b)a^{-2}$ is the multiplicative inverse of $a+b$ in $R$. Since $a+b$ has a multiplicative inverse in $R$, by definition $a+b$ is a unit. Thus, the proof is completed.
+\end{proof}
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 10}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem IA.3, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+For any integer $a$, if $a\not\equiv \mbox{0(mod 3)}$, then $a^2\equiv \mbox{1(mod 3)}$.
+\end{proposition}
+\begin{proof}
+\newpar 
+We will assume that for any integer $a$, $a\not\equiv \mbox{0(mod 3)}$, and show that $a^2\equiv \mbox{1(mod 3)}$. Because $a$ is not congruent to 0 modulo 3 and by Definition 2.9, we know 3 does not divide $a$. By the Division Algorithm and the fact 3 does not divide $a$, there are two cases based on integer remainders:
+
+\textbf{Case 1:} $a=3q+1$ where $q$ is an integer, and
+
+\textbf{Case 2:} $a=3q+2$ where $q$ is an integer.
+
+\newpar
+\textbf{Case 1:} When $a=3q+1$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(3q+1)^2 \\
+&= 9q^2+6q+1 \\
+&= 3(3q^2+2q)+1. \\
+\end{align*}
+\noindent
+Using simple algebra we can them subtract 1 from both sides of the equation to get $a^2-1=3(3q^2+2q)$. We will label $k=3q^2+2q$. Because 3, 2, and $q$ are integers and the set of integers is closed under addition and multiplication, $k$ is an integer. Since $a^2-1=3k$ and $k$ is an integer, $a^2\equiv \mbox{1(mod 3)}$ by Definitions 2.3 and 2.9. 
+
+\newpar
+\textbf{Case 2:} When $a=3q+2$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(3q+2)^2 \\
+&= 9q^2+12q+4 \\
+&= 3(3q^2+4q+1)+1. \\
+\end{align*}
+\noindent
+Using simple algebra we can them subtract 1 from both sides of the equation to get $a^2-1=3(3q^2+4q+1)$. We will label $d=3q^2+4q+1$. Because 3, 4, 1 and $q$ are integers and the set of integers is closed under addition and multiplication, $d$ is an integer. Since $a^2-1=3d$ and $d$ is an integer, $a^2\equiv \mbox{1(mod 3)}$ by Definitions 2.3 and 2.9. 
+
+\newpar 
+We have proven that the conclusion of the given statement is true for both cases, and thus, when $a\not\equiv \mbox{0(mod 3)}$, then $a^2\equiv \mbox{1(mod 3)}$.
+\end{proof}
+
+
+
+\end{document}

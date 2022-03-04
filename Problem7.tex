@@ -1,0 +1,59 @@
+\documentclass[11 pt]{article}
+\title{Problem 7}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem RF.3, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+1.  Find an example of a ring $R$ and elements $a, b \in R$ such that $ab = 0_R$, but $ba \not= 0_R$. Here $0_R$ means the zero element of the ring.
+
+\newpar
+Let $a= \begin{bmatrix}
+    0 & 0 \\
+    0 & 1
+  \end{bmatrix}$ and let $b= \begin{bmatrix}
+    0 & 1 \\
+    0 & 0
+  \end{bmatrix}$ in the ring $M_{2x2}(\mathbb{R})$. $ab=\begin{bmatrix}
+    0 & 0 \\
+    0 & 0
+  \end{bmatrix}$ and $ba= \begin{bmatrix}
+    0 & 1 \\
+    0 & 0
+  \end{bmatrix}$. Therefore, we have provided an example of a ring $R$ where $ab=0_R$, but $ba\not=0_R$.
+
+
+\newpar
+\begin{proposition}
+Let $n \in N$. Suppose $R$ is a ring that has the property that for each $x \in R$, $x^n = x$. Prove that in such
+a ring, if $ab = 0_R$ then $ba = 0_R$.
+\end{proposition}
+\begin{proof}
+We will assume $a,b \in R$, and therefore, since multiplication is closed in rings, $ba \in R$. Now because of the property stated in the proposition, we can say $ba=ba^n$. Definition 8.3 allows us to say the following:
+\begin{align*}
+(ba)^n&=(ba)\cdot (ba)\cdot . . . \cdot (ba) \text{    ($n$ times)} \\
+&=b\cdot (ab)\cdot (ab)\cdot . . . \cdot (ab)\cdot a  \text{   ($ab$ multiplied $n-1$ times)} \\
+&=b\cdot (ab)^{n-1} \cdot a. \\
+\end{align*}
+\noindent
+Since $ab=0_R$, we can substitute $0_R$ for $(ab)$. Thus,
+\begin{align*}
+b\cdot (ab)^{n-1} \cdot a&=b\cdot (0_R)^{n-1} \cdot a \\
+&=b\cdot (0_R)\cdot (0_R)\cdot . . .\cdot (0_R)\cdot a \text{    ($0_R$ multiplied by itself $n-1$ times)} \\ 
+&=b\cdot 0_R\cdot a. \\
+\end{align*}
+\newpar
+Using Theorem 7.5, this turns out to equal $0_R$. Therefore, we have shown that in a ring where $x^n=x$ for every element $x\in R$, if $ab=0_R$, then $ba=0_R$.
+\end{proof}
+\end{document}

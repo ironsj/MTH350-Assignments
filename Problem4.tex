@@ -1,0 +1,113 @@
+\documentclass[11 pt]{article}
+\title{Proof 4}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, MTH 350-02, Problem ANS.2, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Let $R$ be any commuatitive ring and let $Q$ be the set of all polynomials in $R[x]$ that have degree 2 or less. Prove or disprove: $Q$ is a subring of $R[x]$.
+\end{proposition}
+\begin{proof}
+\newpar 
+We will prove this false by showing there is a natural number $m$ such that $[a]^m \not= [a]$ for every $[a]$ in $\mathbb{Z}_m$. Let $m=4$. By the definition of the integers modulo $n$, we are left with 4 cases. We will show $[a]^4 \not= [a]$ in $\mathbb{Z}_4$ for the following cases:
+
+\textbf{Case 1:} $[0]^4$ in $\mathbb{Z}_4$,
+
+\textbf{Case 2:} $[1]^4$ in $\mathbb{Z}_4$,
+
+\textbf{Case 3:} $[2]^4$ in $\mathbb{Z}_4$, and
+
+\textbf{Case 4:} $[3]^4$ in $\mathbb{Z}_4$.
+
+\newpar
+\textbf{Case 1:} When $[0]^4$ in $\mathbb{Z}_4$, we can multiply $[0]$ by itself as follows due to the definition of $[a]^m$ in the proposition and then simplify using the definition of multiplication in $\mathbb{Z}_n$:
+\begin{align*}
+[0]^4&=[0]\cdot[0]\cdot[0]\cdot[0] \\
+&= [0\cdot 0\cdot 0\cdot 0] \\
+&= [0]. \\
+\end{align*}
+\noindent
+Therefore, $[0]^4=[0]$ in $\mathbb{Z}_4$.
+
+\newpar
+\textbf{Case 2:} When $[1]^4$ in $\mathbb{Z}_4$, we can multiply $[0]$ by itself as follows due to the definition of $[a]^m$ in the proposition and then simplify using the definition of multiplication in $\mathbb{Z}_n$:
+\begin{align*}
+[1]^4&=[1]\cdot[1]\cdot[1]\cdot[1] \\
+&= [1\cdot 1\cdot 1\cdot 1] \\
+&= [1]. \\
+\end{align*}
+\noindent
+Therefore, $[1]^4=[1]$ in $\mathbb{Z}_4$.
+
+\newpar
+\textbf{Case 3:} When $[2]^4$ in $\mathbb{Z}_4$, we can multiply $[2]$ by itself as follows due to the definition of $[a]^m$ in the proposition and then simplify using the definition of multiplication in $\mathbb{Z}_n$:
+\begin{align*}
+[2]^4&=[2]\cdot[2]\cdot[2]\cdot[2] \\
+&= [2\cdot 2\cdot 2\cdot 2] \\
+&= [16] \\
+&= [0]. \\
+\end{align*}
+\noindent
+Therefore, $[2]^4\not=[2]$ in $\mathbb{Z}_4$.
+
+\newpar
+\textbf{Case 4:} When $[3]^4$ in $\mathbb{Z}_4$, we can multiply $[3]$ by itself as follows due to the definition of $[a]^m$ in the proposition and then simplify using the definition of multiplication in $\mathbb{Z}_n$:
+\begin{align*}
+[3]^4&=[3]\cdot[3]\cdot[3]\cdot[3] \\
+&= [3\cdot 3\cdot 3\cdot 3] \\
+&= [81] \\
+&= [1]. \\
+\end{align*}
+\noindent
+Therefore, $[3]^4\not=[3]$ in $\mathbb{Z}_4$.
+
+\newpar
+Since $[a]^m\not=[a]$ for every $[a]$ in $\mathbb{Z}_m$ when $m=4$, it is a counterexample to the proposition.
+\end{proof}
+
+
+\newpar
+\begin{proposition}
+Let $n \in N$ and suppose $[a] \in \mathbb{Z}_n$. Given a positive integer $m$, define $[a]^m$ to be
+\begin{align*}
+[a]^m=[a]\cdot[a]\cdot . . . \cdot[a] \text{   (m times)}
+\end{align*}
+If $p$ is prime, then $[a]^p = [a]$ for every $[a]$ in $\mathbb{Z}_p$.
+\end{proposition}
+\begin{proof}
+\newpar 
+To prove this proposition we must first recognize that $[a]^p=[a^p]$. When $[a]^p$ in $\mathbb{Z}_p$, we can multiply $[a]$ by itself as follows due to the definition of $[a]^m$ in the proposition and then simplify using the definition of multiplication in $\mathbb{Z}_n$:
+\begin{align*}
+[a]^p&=[a]\cdot[a]\cdot. . .\cdot[a] \text{   (p times)} \\
+&= [a\cdot a\cdot. . .\cdot a] \text{   (p times)} \\
+&= [a^p]. \\
+\end{align*}
+\noindent
+Now that we know $[a]^p=[a^p]$, we will use $[a^p]$ to represent $[a]^p$. Let us first consider the first $(p-1)$ multiples of $a$, $\{1a, 2a, . . . , (p-1)a\}$. If we are to take each of these multiples and reduce each one modulo $p$, we get an out of order arrangement of $\{1,2, . . ., (p-1)\}$. We know the multiples of $a$ when reduced by modulo $p$ are a rearrangement of $\{1,2, . . ., (p-1)\}$ because if we were to say that $xa\equiv \mbox{ya(mod p)}$, we can cancel the $a$'s because they are relatively prime to $p$ and we get $x\equiv \mbox{y(mod p)}$, which would end up being a contradiction. Therefore, the $(p-1)$ multiples of $a$ will be unique and nonzero. If we are to multiply them all together, we obtain:
+\begin{align*}
+1a\cdot 2a\cdot . . .\cdot (p-1)a \equiv 1\cdot 2\cdot . . .\cdot (p-1) (mod p). \\
+\end{align*}
+\noindent
+If we are to divide both sides by $\{1\cdot 2\cdot . . . \cdot (p-1)\}$ and then multiply by $a$ we obtain:
+\begin{align*}
+a^p\equiv a(mod p). \\
+\end{align*}
+\noindent
+Since $a^p\equiv \mbox{a(mod p)}$, by definition $[a^p]=[a]$. We can then substitute $[a]^p$ for $[a^p]$ because we established them as being equal earlier. Therefore, $[a]^p=[a]$. We have shown that for every $[a]$ in $\mathbb{Z}_p$, $[a]^p=[a]$, thus completing the proof.
+\end{proof}
+
+
+
+\end{document}
